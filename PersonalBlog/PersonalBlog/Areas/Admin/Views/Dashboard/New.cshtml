@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Add New Content";
+}
+@model PersonalBlog.Areas.Admin.ArticleVm
+
+<div class="fs-1">New Article</div>
+<form method="post" asp-action="New">
+    <input type="text" asp-for="Title" value="" class="form-control" placeholder="Article Title"/><br />
+    <input type="date" asp-for="Date" value="" class="form-control" placeholder="Publishing Date" /><br />
+    <input type="text" asp-for="Content" value="" class="form-control" placeholder="Content" /><br />
+
+    <input type="submit" value="Publish" class="Submit" />
+</form>
