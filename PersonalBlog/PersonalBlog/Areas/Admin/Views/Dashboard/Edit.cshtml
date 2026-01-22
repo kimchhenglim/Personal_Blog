@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Edit Content";
+}
+@model PersonalBlog.Areas.Admin.ArticleVm
+
+<div class="fs-1">Edit Article</div>
+<form asp-area="Admin" asp-controller="Dashboard" method="post" asp-action="Edit">
+    <input type="text" asp-for="Title" class="form-control" placeholder="Article Title" /><br />
+    <input type="date" asp-for="Date" value="@Model.Date.ToString("yyyy-MM-dd")" class="form-control" placeholder="Publishing Date" /><br />
+    <input type="text" asp-for="Content" class="form-control" placeholder="Content" /><br />
+
+    <input type="submit" value="Update" class="Submit" />
+</form>
